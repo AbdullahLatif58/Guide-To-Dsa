@@ -17,7 +17,7 @@ export  class Product {
   private createdAt: Date;
   private updatedAt: Date;
 
-  constructor(data: CreateductDTO) {
+  constructor(data: CreateProductDTO) {
     this.validate(data);
 
     this.id = data.id;
