@@ -3,12 +3,13 @@ import type { CreateProductDTO } from "./product.types.js";
 export  class Product {
   private id?: number;
 
-  private name: string;
+  private _name: string;
+  private _price: number;
   private description: string;
   private sku: string;
   private category: string;
 
-  private price: number;
+
   private stock: number;
 
   private isActive: boolean;
@@ -21,12 +22,12 @@ export  class Product {
 
     this.id = data.id;
 
-    this.name = data.name;
+    this._name = data.name;
     this.description = data.description;
     this.sku = data.sku;
     this.category = data.category;
 
-    this.price = data.price;
+    this._price = data.price;
     this.stock = data.stock;
 
     this.isActive = true;
@@ -47,10 +48,34 @@ export  class Product {
       throw new Error("Stock cannot be negative.");
   }
 
+public get name(): string {
+
+    return this._name;
+
+  }
+public get price(): number {
+
+    return this._price;
+
+}
+  public set name(value: string) {
+
+    if (!value.trim()) {
+
+      throw new Error("Product name is required.");
+
+    }
+
+    this._name = value;
+
+    this.updatedAt = new Date();
+
+  }
+
   public rename(name: string): void {
     if (!name.trim()) throw new Error("Name is required.");
 
-    this.name = name;
+    this._name = name;
     this.updatedAt = new Date();
   }
 
@@ -58,18 +83,18 @@ export  class Product {
     if (price <= 0)
       throw new Error("Price increment must be greater than zero.");
 
-    this.price += price;
+    this._price += price;
     this.updatedAt = new Date();
   }
 
   public toObject() {
     return {
       id: this.id,
-      name: this.name,
+     
       description: this.description,
       sku: this.sku,
       category: this.category,
-      price: this.price,
+      
       stock: this.stock,
       isActive: this.isActive,
       createdAt: this.createdAt,
