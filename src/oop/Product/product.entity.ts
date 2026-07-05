@@ -1,7 +1,7 @@
 import type { CreateProductDTO } from "./product.types.js";
 
 export  class Product {
-  private id?: number;
+  private readonly id?: number;
 
   private _name: string;
   private _price: number;
@@ -17,7 +17,7 @@ export  class Product {
   private createdAt: Date;
   private updatedAt: Date;
 
-  constructor(data: CreateProductDTO) {
+  constructor(data: CreateductDTO) {
     this.validate(data);
 
     this.id = data.id;
