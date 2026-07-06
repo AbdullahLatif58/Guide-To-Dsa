@@ -155,3 +155,39 @@ admin.banUser(1);
 admin.deleteUser(2);
 
 console.log(admin.getProfile());
+
+// Method overriding......
+// Definition
+
+// Method Overriding is an OOP feature where a child class provides its own implementation of a method that already exists in the parent class.
+
+// The child method replaces the inherited implementation for that child.
+
+// ⸻
+
+// Why do we use Method Overriding?
+
+// We use method overriding when:
+
+// * The parent class provides a general behavior.
+// * A child class needs the same method but with different or additional business logic.
+
+
+class Users {
+
+    login() {
+
+        console.log("User Login");
+
+    }
+
+}
+class Admins extends User {
+
+    login() {
+
+        console.log("Admin Login");
+
+    }
+
+}
