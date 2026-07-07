@@ -1,0 +1,33 @@
+What is an Abstract Class?
+
+An abstract class is a special type of class that defines a contract while also allowing shared implementation.
+
+It can contain:
+
+* Properties (State)
+* Constructors
+* Normal (Concrete) Methods
+* Abstract Methods
+
+An abstract class cannot be instantiated directly.
+
+Instead, it acts as a base blueprint for child classes.
+
+
+What is an Interface?
+
+An interface defines only a contract.
+
+It specifies what methods or properties must exist, but it cannot provide implementation.
+
+An interface has no state and no shared business logic.
+
+
+
+
+It does not provide:
+
+* Constructor
+* API Key
+* Connection Logic
+* Shared Methods
