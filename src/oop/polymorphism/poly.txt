@@ -1,0 +1,55 @@
+
+defination:  Polymorphism allows us to use one common type while different objects provide their own behavior.
+
+
+interview def: 
+               Polymorphism allows one interface, parent class, or abstract class to represent many different object types. When a common method is called, the implementation that belongs to the actual object is executed.
+
+ Poly = Many
+
+ Morph = Forms
+
+
+
+
+One function.
+
+Different behavior.
+
+Depending on which object you pass.
+
+
+
+                PaymentGateway
+                       ▲
+          ┌────────────┴────────────┐
+          │                         │
+     StripeGateway           PayPalGateway
+          │                         │
+          │                         │
+          └────────────┬────────────┘
+                       │
+                checkout(gateway)
+                       │
+                       ▼
+                gateway.pay()
+
+
+                Notice something.
+
+The checkout function doesn’t know which payment gateway it’s talking to.
+
+The correct implementation is selected automatically based on the actual object.
+
+⸻
+
+
+Many tutorials say:
+
+“Polymorphism means one method, many forms.”
+
+That’s only part of the story.
+
+As a backend engineer, the more useful way to think about it is:
+
+Polymorphism lets you write code against an abstraction (parent class or interface) instead of concrete classes.
