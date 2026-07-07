@@ -1,3 +1,15 @@
+Abstract Class
+
+An abstract class is a base class that defines a contract while also allowing shared state, constructors, and reusable implementation. Child classes inherit from it using extends and must implement any abstract methods.
+
+Interface
+
+An interface defines a contract that specifies the required structure or capabilities of a class. It contains no implementation or shared state, and classes adopt it using implements.
+
+
+
+
+
 What is an Abstract Class?
 
 An abstract class is a special type of class that defines a contract while also allowing shared implementation.
