@@ -2,7 +2,7 @@
 import { NotificationProvider} from "./entity.js";
 
 import type { SendNotificationDTO } from "./type.js";
- class NotificationService {
+ export class NotificationService {
 
   public send(
     provider: NotificationProvider,

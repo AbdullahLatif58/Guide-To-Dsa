@@ -23,7 +23,7 @@
  }
 
 
- class EmailProvider extends NotificationProvider {
+ export class EmailProvider extends NotificationProvider {
   public send(
     recipient: string,
     message: string
@@ -41,7 +41,7 @@
 }
 
 
-class WhatsAppProvider extends NotificationProvider {
+export class WhatsAppProvider extends NotificationProvider {
   public send(
     recipient: string,
     message: string
