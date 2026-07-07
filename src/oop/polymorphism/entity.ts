@@ -1,7 +1,7 @@
 // 
 
 
- abstract class NotificationProvider {
+ export abstract class NotificationProvider {
 
 
     constructor(protected apiKey: string) {}
