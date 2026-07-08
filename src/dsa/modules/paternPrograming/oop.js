@@ -96,3 +96,23 @@ for (let i = 1; i <= n ; i++ ){
       console.log();
   }
 
+// output
+//       *
+//    **
+//   ***
+//  ****
+// *****
+     
+
+for (let i = 1; i <= n ; i++ ){
+
+  for(let c = n; c >=n; c++)
+  {
+    process.stdout.write(`${i}${c}`);
+    for(let c = n; c >= i; c--){
+       process.stdout.write(`${i}${c}`);
+    }
+  }
+  
+      console.log();
+  }
