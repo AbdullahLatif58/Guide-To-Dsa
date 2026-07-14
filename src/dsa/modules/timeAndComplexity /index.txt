@@ -1,0 +1,302 @@
+ Time Complexity is a amount of time taken by as the function of input size (n)
+
+ ways of gettung the time complexity of the function 
+
+ BIG O => upper bound / worst case
+ THeta => averge case
+ Omega => lower bound / best case
+
+
+ constent time or the 0(1): 
+
+
+                              this means when we know the n's exact value and we can get the result in constant time
+
+ 0(n) or the linear time complexity:
+
+                                    this means when the time taken by the function increases linearly with the input size
+
+ 0(n2) or the quadratic time complexity: 
+
+                                        this meand when the time taken by the function increases quadratically with the input size for instance nested loops
+
+
+BIG 0 : 
+       
+
+rules of getting the time complexity : 
+                                       if there is two time complexities one is nested loop and second is the paralled loop = n square + n we will eliminate the n here and consider the n square time complexity. 
+
+
+
+
+
+===========================================================
+ALGORITHM SELECTION CHEAT SHEET (10^n SCALE)
+===========================================================
+
+10^0 = 1
+Example:
+- Single user
+- Single request
+
+Any algorithm works.
+
+
+-----------------------------------------------------------
+
+10^1 = 10
+
+Example:
+- Days in a sprint
+- Team members
+
+O(n²) is perfectly fine.
+
+
+-----------------------------------------------------------
+
+10^2 = 100
+
+Example:
+- Contacts
+- Products
+- Students
+
+Choose:
+✓ O(1)
+✓ O(log n)
+✓ O(n)
+✓ O(n log n)
+✓ O(n²)
+
+
+-----------------------------------------------------------
+
+10^3 = 1,000
+
+Example:
+- Small company database
+- Small chat history
+
+Choose:
+✓ O(1)
+✓ O(log n)
+✓ O(n)
+✓ O(n log n)
+
+Avoid:
+✗ O(n²) in loops
+
+
+-----------------------------------------------------------
+
+10^4 = 10,000
+
+Example:
+- Medium CRM
+- WhatsApp messages
+
+Choose:
+✓ O(1)
+✓ O(log n)
+✓ O(n)
+
+Use O(n log n) only when necessary.
+
+Never use O(n²).
+
+
+-----------------------------------------------------------
+
+10^5 = 100,000
+
+Example:
+- Ecommerce orders
+- Customer records
+
+Production standard:
+
+✓ O(1)
+✓ O(log n)
+✓ O(n)
+
+Sorting:
+✓ O(n log n)
+
+Never:
+✗ O(n²)
+
+
+-----------------------------------------------------------
+
+10^6 = 1 Million
+
+Example:
+- Large SaaS
+- Gmail inbox
+- Facebook posts
+
+Only:
+
+✓ O(1)
+✓ O(log n)
+✓ O(n)
+
+Sorting:
+✓ O(n log n)
+
+Anything worse becomes expensive.
+
+
+-----------------------------------------------------------
+
+10^7 = 10 Million
+
+Example:
+- Large social network
+
+Preferred:
+
+✓ O(1)
+
+Acceptable:
+
+✓ O(log n)
+
+Sometimes:
+
+✓ O(n)
+
+Usually distributed across servers.
+
+
+-----------------------------------------------------------
+
+10^8 = 100 Million
+
+Example:
+- Search engine index
+- Analytics events
+
+Need:
+
+✓ Hash Tables
+✓ Indexes
+✓ Caching
+✓ Parallel Processing
+
+Algorithms:
+
+O(1)
+
+O(log n)
+
+
+-----------------------------------------------------------
+
+10^9 = 1 Billion
+
+Example:
+- Google
+- Facebook
+- YouTube
+
+Single-machine solutions usually fail.
+
+Need:
+
+✓ Distributed databases
+✓ Sharding
+✓ Load balancing
+✓ Message queues
+
+Algorithms:
+
+O(1)
+
+O(log n)
+
+
+-----------------------------------------------------------
+
+10^10+
+
+Example:
+
+Google Search
+
+Amazon
+
+Netflix
+
+TikTok
+
+OpenAI
+
+Only highly optimized systems.
+
+Everything is distributed.
+
+Complexity target:
+
+O(1)
+
+O(log n)
+
+Sometimes O(n) over partitions.
+
+
+===========================================================
+RULE OF THUMB
+===========================================================
+
+O(1)
+Best possible.
+Examples:
+HashMap
+Object lookup
+Array index
+
+
+O(log n)
+Excellent.
+Examples:
+Binary Search
+B-Trees
+Database Indexes
+
+
+O(n)
+Very good.
+Examples:
+Scanning arrays
+Reading a file
+
+
+O(n log n)
+Acceptable.
+Examples:
+Merge Sort
+Quick Sort
+Heap Sort
+
+
+O(n²)
+Only for small datasets (<1000).
+
+Examples:
+Bubble Sort
+Nested loops
+
+
+O(n³)
+Avoid.
+
+
+O(2^n)
+Almost never.
+
+
+O(n!)
+Impossible for real systems.

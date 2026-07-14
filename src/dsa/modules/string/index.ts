@@ -3,13 +3,13 @@ let s = "Abdullah";
  s.length; // 8
  console.log(s.length);
 
- // for splitting the string we use this 
+
  console.log(s.slice(4,8));
 
   console.log(s.slice(-4,s.length));
 
 
-  // this is use for substrings man this works with only positive 
+
 
 console.log(s.substring(0,6));
 
@@ -50,3 +50,17 @@ console.log(rev);
 let str = "Hello m is m my name free free free"
 
 
+let arr = new Array(128).fill(0);
+
+  for( let i = 0; i <  str.length; i++){
+     let index = str.charCodeAt(i);
+       arr[index] = arr[index] + 1;
+  }
+  
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] > 0){
+      console.log(String.fromCharCode(i) + " : " + arr[i]);
+    }
+  }
+
+  
