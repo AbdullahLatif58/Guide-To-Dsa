@@ -1,0 +1,353 @@
+Selection Sort – Complete Explanation
+
+What is Selection Sort?
+
+Selection Sort is a comparison-based sorting algorithm.
+
+Instead of repeatedly swapping adjacent elements (like Bubble Sort), Selection Sort repeatedly finds the smallest element from the unsorted part of the array and places it in its correct position.
+
+⸻
+
+Core Idea
+
+Think of arranging playing cards.
+
+Suppose the cards are:
+
+12 5 8 1 9
+
+You look through all the cards, find the smallest one (1), and place it at the beginning.
+
+Then you ignore that first position because it’s already sorted.
+
+Repeat the process for the remaining cards.
+
+⸻
+
+Example
+
+Input
+
+[12, 5, 8, 1, 9]
+
+Output
+
+[1, 5, 8, 9, 12]
+
+⸻
+
+How Selection Sort Works
+
+Initially
+
+[12, 5, 8, 1, 9]
+
+⸻
+
+Pass 1
+
+Sorted Part
+
+[]
+
+Unsorted Part
+
+[12, 5, 8, 1, 9]
+
+Find the smallest element.
+
+Smallest is
+
+1
+
+Swap it with the first element.
+
+Result
+
+[1, 5, 8, 12, 9]
+
+Now
+
+1
+
+is in its final position forever.
+
+⸻
+
+Pass 2
+
+Sorted
+
+[1]
+
+Unsorted
+
+[5, 8, 12, 9]
+
+Find the smallest.
+
+It is already
+
+5
+
+No swap is needed.
+
+Array
+
+[1, 5, 8, 12, 9]
+
+⸻
+
+Pass 3
+
+Sorted
+
+[1, 5]
+
+Unsorted
+
+[8, 12, 9]
+
+Find the smallest.
+
+Smallest
+
+8
+
+Already correct.
+
+No swap.
+
+⸻
+
+Pass 4
+
+Sorted
+
+[1, 5, 8]
+
+Unsorted
+
+[12, 9]
+
+Smallest
+
+9
+
+Swap
+
+[1, 5, 8, 9, 12]
+
+Done.
+
+⸻
+
+Visualization
+
+Pass 1
+
+[12,5,8,1,9]
+Find minimum
+            ↓
+[1,5,8,12,9]
+
+⸻
+
+Pass 2
+
+[1|5,8,12,9]
+Find minimum
+Already 5
+
+⸻
+
+Pass 3
+
+[1,5|8,12,9]
+Find minimum
+Already 8
+
+⸻
+
+Pass 4
+
+[1,5,8|12,9]
+Find minimum
+Swap
+[1,5,8,9,12]
+
+⸻
+
+Algorithm
+
+For every position
+
+1. Assume the current element is the minimum.
+2. Search the remaining array.
+3. If a smaller element is found, remember its index.
+4. After finishing the search, swap the minimum element into the current position.
+
+Repeat until the array is sorted.
+
+⸻
+
+Why Two Loops?
+
+Outer Loop
+
+The outer loop decides:
+
+“Which position am I filling?”
+
+Example
+
+i = 0
+Fill first position.
+
+Then
+
+i = 1
+Fill second position.
+
+Then
+
+i = 2
+Fill third position.
+
+⸻
+
+Inner Loop
+
+The inner loop searches for the minimum element.
+
+It scans every remaining element.
+
+Example
+
+Current minimum = 12
+Compare with 5
+Minimum becomes 5
+Compare with 8
+Still 5
+Compare with 1
+Minimum becomes 1
+Compare with 9
+Still 1
+
+After the scan finishes,
+
+swap
+
+12
+↓
+1
+
+⸻
+
+Why Doesn’t Selection Sort Swap Every Time?
+
+Bubble Sort swaps immediately whenever it finds two elements in the wrong order.
+
+Selection Sort waits until it finishes searching for the smallest element.
+
+It performs at most one swap per pass.
+
+⸻
+
+Bubble Sort vs Selection Sort
+
+Bubble Sort	Selection Sort
+Repeatedly swaps adjacent elements	Finds the minimum element
+Many swaps	At most one swap per pass
+Largest element moves to the end	Smallest element moves to the front
+Swaps during comparisons	Swaps after searching
+
+⸻
+
+Time Complexity
+
+Worst Case
+
+O(n²)
+
+Average Case
+
+O(n²)
+
+Best Case
+
+O(n²)
+
+Unlike Bubble Sort, Selection Sort still searches the remaining array even if it is already sorted.
+
+⸻
+
+Space Complexity
+
+O(1)
+
+It sorts the array in place.
+
+⸻
+
+Is Selection Sort Stable?
+
+No.
+
+Example
+
+5A 5B 3
+
+Finding the minimum (3) and swapping it with the first element can change the order of equal elements.
+
+So Selection Sort is not stable in its standard implementation.
+
+⸻
+
+When is Selection Sort Used?
+
+Selection Sort is mainly used for learning algorithms.
+
+It can be useful when swaps are expensive, because it performs very few swaps.
+
+For large datasets, algorithms like Merge Sort, Quick Sort, or Heap Sort are much faster.
+
+⸻
+
+Bubble Sort Mindset
+
+Bubble Sort asks:
+
+Are these two adjacent elements in the correct order?
+
+If not,
+
+swap immediately.
+
+⸻
+
+Selection Sort Mindset
+
+Selection Sort asks:
+
+What is the smallest element in the remaining unsorted array?
+
+Find it first,
+
+then perform one swap.
+
+⸻
+
+Key Concept to Remember
+
+Think of Selection Sort like choosing the shortest student in a line.
+
+You look at everyone,
+
+find the shortest,
+
+place them at the front.
+
+Then ignore them and repeat the process for the remaining students.
+
+That’s exactly how Selection Sort works.
