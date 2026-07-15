@@ -1,0 +1,365 @@
+Insertion Sort – Complete Explanation
+
+What is Insertion Sort?
+
+Insertion Sort is a comparison-based sorting algorithm.
+
+Instead of finding the smallest element (Selection Sort) or repeatedly swapping adjacent elements (Bubble Sort), Insertion Sort builds a sorted portion of the array one element at a time.
+
+Think of it like arranging playing cards in your hand.
+
+Whenever you pick up a new card, you insert it into the correct position among the cards you’ve already sorted.
+
+⸻
+
+Core Idea
+
+Imagine you have these cards:
+
+7 4 5 2 9
+
+Initially, you assume the first card is already sorted.
+
+Sorted      Unsorted
+7 | 4 5 2 9
+
+Now pick the next card (4).
+
+Ask yourself:
+
+Where should 4 go inside the sorted part?
+
+Move 7 one position to the right.
+
+Insert 4.
+
+Result:
+
+4 7 | 5 2 9
+
+Repeat this process until every element has been inserted into its proper position.
+
+⸻
+
+Example
+
+Input
+
+[7,4,5,2,9]
+
+Output
+
+[2,4,5,7,9]
+
+⸻
+
+Step-by-Step
+
+Initial
+
+7 | 4 5 2 9
+
+The first element is considered sorted.
+
+⸻
+
+Pass 1
+
+Current element
+
+4
+
+Compare with
+
+7
+
+Since
+
+4 < 7
+
+Shift 7 one position to the right.
+
+7 7 5 2 9
+
+Insert 4.
+
+4 7 | 5 2 9
+
+⸻
+
+Pass 2
+
+Current element
+
+5
+
+Compare with
+
+7
+
+Shift 7.
+
+4 7 7 2 9
+
+Compare with
+
+4
+
+No more shifting.
+
+Insert 5.
+
+4 5 7 | 2 9
+
+⸻
+
+Pass 3
+
+Current element
+
+2
+
+Compare
+
+2 < 7
+
+Shift 7.
+
+4 5 7 7 9
+
+Compare
+
+2 < 5
+
+Shift 5.
+
+4 5 5 7 9
+
+Compare
+
+2 < 4
+
+Shift 4.
+
+4 4 5 7 9
+
+Insert 2.
+
+2 4 5 7 | 9
+
+⸻
+
+Pass 4
+
+Current element
+
+9
+
+Compare with 7.
+
+No shifting needed.
+
+Already in the correct position.
+
+Final array
+
+2 4 5 7 9
+
+⸻
+
+Visualization
+
+Pass 1
+
+7 | 4 5 2 9
+↓
+4 7 | 5 2 9
+
+⸻
+
+Pass 2
+
+4 7 | 5 2 9
+↓
+4 5 7 | 2 9
+
+⸻
+
+Pass 3
+
+4 5 7 | 2 9
+↓
+2 4 5 7 | 9
+
+⸻
+
+Pass 4
+
+2 4 5 7 | 9
+↓
+2 4 5 7 9
+
+⸻
+
+The Main Difference
+
+Bubble Sort says
+
+Compare two neighbors and swap immediately.
+
+Selection Sort says
+
+Search for the smallest element and swap once.
+
+Insertion Sort says
+
+Take one element and insert it into the correct place.
+
+⸻
+
+Algorithm
+
+For every element starting from index 1:
+
+1. Store the current element (often called the key).
+2. Compare it with elements to its left.
+3. Shift every larger element one position to the right.
+4. Insert the key into the empty position created by those shifts.
+5. Repeat until the array is sorted.
+
+⸻
+
+Why does it shift instead of swapping?
+
+Suppose
+
+7 4
+
+If we swap:
+
+4 7
+
+That works for two elements.
+
+But consider
+
+2 4 6 8 3
+
+Instead of many swaps, Insertion Sort simply shifts:
+
+2 4 6 8 8
+2 4 6 6 8
+2 4 4 6 8
+
+Now insert 3.
+
+2 3 4 6 8
+
+Shifting is the key idea of Insertion Sort.
+
+⸻
+
+Time Complexity
+
+Worst Case
+
+O(n²)
+
+Example
+
+5 4 3 2 1
+
+Every element must move to the beginning.
+
+⸻
+
+Average Case
+
+O(n²)
+
+⸻
+
+Best Case
+
+O(n)
+
+Example
+
+1 2 3 4 5
+
+Every element is already in the correct position.
+
+No shifting is required.
+
+⸻
+
+Space Complexity
+
+O(1)
+
+It sorts the array in place.
+
+⸻
+
+Is Insertion Sort Stable?
+
+Yes.
+
+Equal elements are not moved past each other.
+
+Their original order is preserved.
+
+⸻
+
+When is Insertion Sort Used?
+
+Insertion Sort is surprisingly useful for:
+
+* Small arrays
+* Nearly sorted arrays
+* Hybrid algorithms (many standard libraries use it for small partitions inside Quick Sort or Merge Sort implementations)
+
+It performs much better than Bubble Sort on nearly sorted data.
+
+⸻
+
+Bubble vs Selection vs Insertion
+
+Bubble Sort	Selection Sort	Insertion Sort
+Swap adjacent elements	Find the minimum	Insert the current element into the sorted part
+Many swaps	One swap per pass	Shift larger elements
+Largest moves to the end	Smallest moves to the front	Sorted portion grows from left to right
+Stable	Not stable	Stable
+Best Case: O(n) (optimized)	Best Case: O(n²)	Best Case: O(n)
+
+⸻
+
+Think Like This
+
+Imagine sorting playing cards in your hand.
+
+Every time someone gives you a new card:
+
+* You don’t throw all your cards on the table.
+* You don’t search for the smallest card.
+* You simply move a few cards to the right and insert the new card where it belongs.
+
+That is exactly how Insertion Sort works.
+
+⸻
+
+Key Concept to Remember
+
+Bubble Sort:
+
+“Swap neighbors.”
+
+Selection Sort:
+
+“Find the minimum.”
+
+Insertion Sort:
+
+“Take one element and insert it into the correct position inside the already sorted part.”
+
+If you remember these three ideas, you’ll never confuse the algorithms again.
