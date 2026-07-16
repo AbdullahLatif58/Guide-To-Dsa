@@ -1,6 +1,9 @@
    
    let arr = [5, 2, 9, 1, 5, 7] as any;
-   
+
+   arr.sort();
+   arr.reverse();
+   console.log(arr);
 // ascending orrder
      for(let i = 1; i < arr.length; i++) {
 
@@ -13,6 +16,7 @@
       while(j >= 0 && arr[j] > key) {
          arr[j + 1] = arr[j];
          j--;
+         console.log(arr);
       }
       arr[j + 1] = key;
     

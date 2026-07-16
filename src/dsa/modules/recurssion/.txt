@@ -1,0 +1,35 @@
+Recurssion:" 
+
+            A function calling again and again until its stoping points hits or meet;
+
+            the Recurssion is about splitting a huge task into a small chunks.
+
+             
+ function index(n: number){
+   if (n === 0 ) return ;
+   console.log("hello");
+   console.log(n)
+   index(n - 1);
+   
+ }
+
+
+ index(5)
+
+ hello
+5
+hello
+4
+hello
+3
+hello
+2
+hello
+1
+1
+2
+3
+4
+5
+
+ 1 2 3 4 5 is coming from the backtracking man this is following the LIFO RULe
