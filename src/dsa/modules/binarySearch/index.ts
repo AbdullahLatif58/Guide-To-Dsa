@@ -32,5 +32,3 @@ let arr = [1, 4, 5,6,7 ,8,9,12,13,15,18,20,21,23,25,27] as any;
 } else {
 
     console.log("Target not found");
-
-}
