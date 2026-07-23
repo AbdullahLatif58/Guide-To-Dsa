@@ -22,6 +22,7 @@ let arr = [1, 4, 5,6,7 ,8,9,12,13,15,18,20,21,23,25,27] as any;
          return  -1;
        }
 
+       
 
        const index = binarySearch(arr, target);
 

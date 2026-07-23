@@ -1,0 +1,278 @@
+===============================
+COMPLETE DSA ROADMAP
+===============================
+
+PHASE 1 — ARRAYS
+----------------
+1. Array Traversal
+2. Reverse Array
+3. Find Maximum & Minimum
+4. Second Largest Element
+5. Check if Array is Sorted
+6. Remove Duplicates
+7. Left Rotation
+8. Right Rotation
+9. Move Zeroes
+10. Union of Two Arrays
+11. Intersection of Two Arrays
+12. Missing Number
+13. Two Sum
+14. Three Sum
+15. Four Sum
+16. Majority Element
+17. Kadane's Algorithm
+18. Maximum Product Subarray
+19. Merge Sorted Arrays
+20. Dutch National Flag Algorithm
+21. Next Permutation
+22. Rearrange Positive & Negative Numbers
+23. Prefix Sum
+24. Difference Array
+
+===============================
+
+PHASE 2 — SORTING
+-----------------
+25. Bubble Sort
+26. Selection Sort
+27. Insertion Sort
+28. Merge Sort
+29. Quick Sort
+30. Heap Sort
+31. Counting Sort
+32. Radix Sort
+33. Bucket Sort
+
+===============================
+
+PHASE 3 — BINARY SEARCH
+-----------------------
+34. Binary Search
+35. Lower Bound
+36. Upper Bound
+37. Search Insert Position
+38. Floor & Ceil
+39. First Occurrence
+40. Last Occurrence
+41. Count Occurrences
+42. Search in Rotated Sorted Array
+43. Find Minimum in Rotated Array
+44. Find Peak Element
+45. Binary Search on Answer
+
+===============================
+
+PHASE 4 — STRINGS
+-----------------
+46. String Traversal
+47. Reverse String
+48. Palindrome
+49. Frequency Count
+50. Anagram
+51. Longest Common Prefix
+52. Roman to Integer
+53. String Compression
+54. KMP Algorithm
+55. Rabin-Karp
+56. Z Algorithm
+
+===============================
+
+PHASE 5 — HASHING
+-----------------
+57. Hash Map
+58. Hash Set
+59. Frequency Counter
+60. Duplicate Detection
+61. Group Anagrams
+62. Top K Frequent Elements
+63. Longest Consecutive Sequence
+
+===============================
+
+PHASE 6 — TWO POINTERS
+----------------------
+64. Two Sum II
+65. Remove Duplicates
+66. Move Zeroes
+67. Container With Most Water
+68. Three Sum
+69. Four Sum
+70. Trapping Rain Water
+
+===============================
+
+PHASE 7 — SLIDING WINDOW
+------------------------
+71. Maximum Sum Subarray
+72. Fixed Window
+73. Variable Window
+74. Longest Substring Without Repeating Characters
+75. Minimum Window Substring
+76. Longest Repeating Character Replacement
+77. Fruits Into Baskets
+
+===============================
+
+PHASE 8 — RECURSION
+-------------------
+78. Basic Recursion
+79. Tail Recursion
+80. Backtracking
+81. Subsets
+82. Permutations
+83. Combination Sum
+84. N Queens
+85. Sudoku Solver
+86. Rat in a Maze
+
+===============================
+
+PHASE 9 — LINKED LIST
+---------------------
+87. Singly Linked List
+88. Doubly Linked List
+89. Reverse Linked List
+90. Middle Node
+91. Detect Cycle
+92. Merge Two Lists
+93. Remove Nth Node
+94. Reverse in K Groups
+95. LRU Cache
+
+===============================
+
+PHASE 10 — STACK
+----------------
+96. Stack Basics
+97. Valid Parentheses
+98. Min Stack
+99. Next Greater Element
+100. Previous Greater Element
+101. Monotonic Stack
+102. Largest Rectangle in Histogram
+103. Daily Temperatures
+
+===============================
+
+PHASE 11 — QUEUE
+----------------
+104. Queue Basics
+105. Circular Queue
+106. Deque
+107. Priority Queue
+108. Monotonic Queue
+
+===============================
+
+PHASE 12 — TREES
+----------------
+109. Binary Tree
+110. Binary Search Tree
+111. Tree Traversals
+112. DFS
+113. BFS
+114. Height of Tree
+115. Diameter
+116. Balanced Tree
+117. Lowest Common Ancestor
+118. Path Sum
+119. Serialize & Deserialize
+120. Trie
+
+===============================
+
+PHASE 13 — HEAPS
+----------------
+121. Min Heap
+122. Max Heap
+123. Heapify
+124. Heap Sort
+125. Priority Queue
+126. Kth Largest Element
+127. Merge K Sorted Lists
+128. Top K Elements
+
+===============================
+
+PHASE 14 — GRAPHS
+-----------------
+129. Graph Representation
+130. DFS
+131. BFS
+132. Connected Components
+133. Cycle Detection
+134. Topological Sort
+135. Dijkstra
+136. Bellman-Ford
+137. Floyd-Warshall
+138. Prim's MST
+139. Kruskal MST
+140. Union Find
+141. Disjoint Set
+142. Bridges
+143. Articulation Points
+
+===============================
+
+PHASE 15 — GREEDY
+-----------------
+144. Activity Selection
+145. Job Scheduling
+146. Huffman Coding
+147. Fractional Knapsack
+148. Jump Game
+149. Gas Station
+150. Merge Intervals
+
+===============================
+
+PHASE 16 — DYNAMIC PROGRAMMING
+------------------------------
+151. Fibonacci DP
+152. Climbing Stairs
+153. House Robber
+154. Coin Change
+155. Knapsack
+156. Longest Increasing Subsequence
+157. Longest Common Subsequence
+158. Edit Distance
+159. Matrix Chain Multiplication
+160. Partition DP
+
+===============================
+
+PHASE 17 — BIT MANIPULATION
+---------------------------
+161. XOR
+162. AND
+163. OR
+164. Left Shift
+165. Right Shift
+166. Count Set Bits
+167. Power of Two
+168. Single Number
+169. Bit Masking
+
+===============================
+
+PHASE 18 — ADVANCED
+-------------------
+170. Segment Tree
+171. Fenwick Tree (Binary Indexed Tree)
+172. Sparse Table
+173. Interval Tree
+174. AVL Tree
+175. Red-Black Tree
+176. B Tree
+177. B+ Tree
+178. Suffix Array
+179. Suffix Tree
+180. Aho-Corasick
+181. Bloom Filter
+182. Skip List
+183. K-D Tree
+184. Treap
+185. Cartesian Tree
+
+===============================
