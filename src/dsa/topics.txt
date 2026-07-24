@@ -276,3 +276,36 @@ PHASE 18 — ADVANCED
 185. Cartesian Tree
 
 ===============================
+
+
+
+
+
+
+40% DSA
+
+30% Backend Development
+
+20% OOP & System Design
+
+10% SQL + Databases
+
+
+
+Arrays            20
+Strings           20
+Hash Maps         20
+Binary Search     15
+Sliding Window    20
+Two Pointers      20
+Stack             20
+Queue             10
+Linked List       20
+Trees             35
+Heap              15
+Graphs            35
+Backtracking      20
+Greedy            20
+Dynamic Programming 40
+
+Total ≈ 330 Problems

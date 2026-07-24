@@ -1,2 +1,365 @@
 Merge Sort(divide and conquer)
 
+=========================================
+MERGE SORT — COMPLETE NOTES
+=========================================
+
+1. WHAT IS MERGE SORT?
+----------------------
+
+Merge Sort is a Divide and Conquer sorting algorithm.
+
+Instead of comparing every element with every other element (like Bubble Sort),
+Merge Sort repeatedly divides the array into smaller pieces until every piece
+contains only one element.
+
+Then it merges those small pieces back together in sorted order.
+
+Example:
+
+[8,3,6,2,7,1,5,4]
+
+↓
+
+Divide
+
+[8,3,6,2]      [7,1,5,4]
+
+↓
+
+Divide Again
+
+[8,3] [6,2]    [7,1] [5,4]
+
+↓
+
+Divide Again
+
+[8][3][6][2][7][1][5][4]
+
+Now every array has only one element.
+
+Start merging...
+
+[3,8]
+[2,6]
+[1,7]
+[4,5]
+
+↓
+
+Merge again
+
+[2,3,6,8]
+[1,4,5,7]
+
+↓
+
+Final merge
+
+[1,2,3,4,5,6,7,8]
+
+Array Sorted.
+
+=========================================
+
+2. WHY DOES IT WORK?
+--------------------
+
+A single element is already sorted.
+
+Merge Sort keeps dividing until every part is already sorted.
+
+Then it merges two sorted arrays into one bigger sorted array.
+
+Eventually the whole array becomes sorted.
+
+=========================================
+
+3. HOW DOES MERGING WORK?
+-------------------------
+
+Suppose we have
+
+Left
+
+[2,5,8]
+
+Right
+
+[1,3,7]
+
+Take two pointers.
+
+i → Left
+j → Right
+
+Compare
+
+2 vs 1
+
+Smaller is 1
+
+Result
+
+[1]
+
+Compare
+
+2 vs 3
+
+Smaller is 2
+
+Result
+
+[1,2]
+
+Compare
+
+5 vs 3
+
+Smaller is 3
+
+Result
+
+[1,2,3]
+
+Compare
+
+5 vs 7
+
+Smaller is 5
+
+Result
+
+[1,2,3,5]
+
+Compare
+
+8 vs 7
+
+Smaller is 7
+
+Result
+
+[1,2,3,5,7]
+
+Left still has
+
+8
+
+Append it
+
+Result
+
+[1,2,3,5,7,8]
+
+Done.
+
+=========================================
+
+4. TIME COMPLEXITY
+------------------
+
+Best Case
+
+O(n log n)
+
+Average Case
+
+O(n log n)
+
+Worst Case
+
+O(n log n)
+
+Unlike Bubble Sort,
+Merge Sort never becomes O(n²).
+
+=========================================
+
+5. SPACE COMPLEXITY
+-------------------
+
+O(n)
+
+Reason:
+
+Merge Sort creates temporary arrays while merging.
+
+It is NOT an in-place sorting algorithm.
+
+=========================================
+
+6. IS MERGE SORT STABLE?
+------------------------
+
+YES.
+
+Equal elements keep their original order.
+
+Example
+
+Before
+
+John(80)
+
+Ali(80)
+
+After sorting
+
+John(80)
+
+Ali(80)
+
+Their order stays the same.
+
+=========================================
+
+7. ADVANTAGES
+-------------
+
+✔ Guaranteed O(n log n)
+
+✔ Very fast for large datasets
+
+✔ Stable sorting
+
+✔ Easy to parallelize
+
+✔ Excellent for linked lists
+
+=========================================
+
+8. DISADVANTAGES
+----------------
+
+✘ Uses extra memory
+
+✘ Slower than Quick Sort on many in-memory datasets because of copying
+
+=========================================
+
+9. WHERE IS MERGE SORT USED IN REAL ENGINEERING?
+------------------------------------------------
+
+1. External Sorting
+
+Suppose a company has
+
+5 TB of log files.
+
+RAM is only
+
+32 GB.
+
+You cannot load everything into memory.
+
+Solution
+
+• Split the file into smaller chunks.
+• Sort each chunk.
+• Merge all sorted chunks.
+
+This is exactly how external merge sort works.
+
+------------------------------------------------
+
+2. Database Systems
+
+Databases often need to sort millions of rows for:
+
+ORDER BY
+
+GROUP BY
+
+MERGE JOIN
+
+When the data doesn't fit in memory, they use merge-based external sorting techniques.
+
+------------------------------------------------
+
+3. Search Engines
+
+Search engines process enormous collections of documents.
+
+Large sorted index files are merged together efficiently.
+
+------------------------------------------------
+
+4. Log Processing
+
+Companies like Netflix, Amazon, and Google process huge log files.
+
+Logs are sorted and merged before analytics.
+
+------------------------------------------------
+
+5. Big Data
+
+Frameworks such as Hadoop and Spark use merge operations extensively after distributed sorting.
+
+------------------------------------------------
+
+6. Version Control
+
+Git conceptually merges sorted changes and histories, though it doesn't use Merge Sort directly.
+
+The "merge" idea is fundamental.
+
+------------------------------------------------
+
+7. Linked Lists
+
+Merge Sort is one of the best sorting algorithms for linked lists because splitting and merging nodes is efficient.
+
+=========================================
+
+10. INTERVIEW QUESTIONS
+-----------------------
+
+• Sort an array.
+
+• Merge two sorted arrays.
+
+• Count inversions.
+
+• Merge K sorted arrays.
+
+• Merge K sorted linked lists.
+
+• External sorting.
+
+=========================================
+
+11. WHEN SHOULD I USE MERGE SORT?
+---------------------------------
+
+Use Merge Sort when:
+
+✔ Data is very large.
+
+✔ Stable sorting is required.
+
+✔ Worst-case performance matters.
+
+✔ Sorting linked lists.
+
+✔ Working with files larger than available RAM.
+
+=========================================
+
+12. WHEN SHOULD I NOT USE MERGE SORT?
+-------------------------------------
+
+Avoid it when:
+
+✘ Memory usage is critical.
+
+✘ The dataset is small.
+
+✘ You need an in-place sort.
+
+Quick Sort or other algorithms may be a better choice in those cases.
+
+=========================================
