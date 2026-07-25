@@ -26,7 +26,7 @@ An abstract class cannot be instantiated directly.
 Instead, it acts as a base blueprint for child classes.
 
 
-What is an Interface?
+What is an Interfa
 
 An interface defines only a contract.
 

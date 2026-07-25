@@ -157,6 +157,7 @@ admin.deleteUser(2);
 console.log(admin.getProfile());
 
 // Method overriding......
+
 // Definition
 
 // Method Overriding is an OOP feature where a child class provides its own implementation of a method that already exists in the parent class.
@@ -171,7 +172,6 @@ console.log(admin.getProfile());
 
 // * The parent class provides a general behavior.
 // * A child class needs the same method but with different or additional business logic.
-
 
 class Users {
 
