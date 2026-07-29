@@ -1,7 +1,4 @@
 
-
-
-
  function findPivot(arr: any, f: number, l: number) {
    let pivot = arr[f];
    let i = f + 1;

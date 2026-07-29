@@ -1,3 +1,4 @@
+import { spawn } from "node:child_process";
 import { log } from "node:console";
 
 let arr = [12,14,1,5,6] as any;
@@ -42,7 +43,6 @@ for(let i = 0; i < n - 1; i++) {
        swap(arr2, j, j + 1);
        swapped = true;
    }
-   
    }
    if(!swapped) {
       break;
@@ -67,3 +67,13 @@ for(let i = 0; i < length - 1; i++) {
 }
 
 console.log(arr3);
+
+
+
+let arrey = [9, 12, 13, 14, 16] as any;
+
+for(let i = 0; i < arrey.length - 1; i++) {
+   for(let j = 0; j < arrey.length - 1 - i; j++){
+       swap(arrey, j, j + 1)
+   }
+}
