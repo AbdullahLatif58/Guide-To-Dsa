@@ -1,0 +1,29 @@
+- Closures
+
+- Scope
+
+- Hoisting
+
+- Event Loop
+
+- Call Stack
+
+- Callback Queue
+
+- Microtask Queue
+
+- Promises
+
+- Async/Await
+
+- this Keyword
+
+- Prototype
+
+- Classes
+
+- Modules
+
+- Memory Management
+
+- Garbage Collection
