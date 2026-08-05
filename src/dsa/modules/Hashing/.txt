@@ -1,0 +1,5 @@
+Defination: 
+            Hashing is technique of converting a value into a hash value for storing and accessing a data Quickly.
+
+
+            
