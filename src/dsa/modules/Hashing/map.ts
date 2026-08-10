@@ -91,3 +91,26 @@ for (let i = 0; i < arr.length; i++) {
 }
 
 console.log(maps);
+
+
+// sort the people
+
+let names = ["john", "jane", "alice"] as any;
+let heights = [170, 160, 180] as any;
+
+let people = new Map();
+let ans = [] as any;
+function peoplesorting(names: any, heights: any) {
+for (let i = 0; i < names.length; i++) {
+     people.set(heights[i], names[i]);
+}
+  heights.sort((a: any, b: any) => b - a);
+
+  for(let i = 0; i < heights.length; i++) {
+    names[i] = people.get(heights[i]);
+  }
+  return names;
+}
+
+console.log(people);
+console.log(peoplesorting(names, heights));
