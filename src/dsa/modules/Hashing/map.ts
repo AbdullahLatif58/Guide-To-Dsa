@@ -139,7 +139,7 @@ console.log(TwoSum(arr, target));
 
 let arr1 = [1,2,2,1];
 let arr2 = [2,2];
- 
+ // Intersaction of two arrays
  function Intersaction(arrOne: any, arrTwo: any) {
    let map = new Map();
     const result: number[] = [];
@@ -166,25 +166,4 @@ let arr2 = [2,2];
     let k = 2
    
 
-   function subArray(arr: any, k: any) {
-      let map = new Map();
-      map.set(0,1);
-      let sum = 0;
-      let count = 0
-     for(let nums of arr) {
-      sum += nums;
-       const previous = map.get(sum - k);
-      if(previous) {
-          count += previous;
-      }
-      map.set(sum, (map.get(sum) ?? 0) + 1);
-      console.log(map);
-     }
-     return count;
-     
-   }
-
-console.log(subArray([1,1,1], 2));
-
-
-console.log(subArray([10,12,1,1,2,3,7,5], 12));
+  
