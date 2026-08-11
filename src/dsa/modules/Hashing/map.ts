@@ -2,6 +2,8 @@
 // Map cant have duplicate  key values and data like the Set.
 // 1. set(key, value)
 
+import { count } from "node:console";
+
 
 const map = new Map<string, number>();
 
@@ -114,3 +116,75 @@ for (let i = 0; i < names.length; i++) {
 
 console.log(people);
 console.log(peoplesorting(names, heights));
+
+
+
+// Two Sum Problem
+arr = [2, 7, 11, 15]
+let target = 9;
+ function TwoSum(arr: any, target: number) {
+     const map = new Map();
+      for(let i = 0; i < arr.length; i++) {
+         if(map.has(target - arr[i])) {
+            return [i, map.get(target - arr[i])];
+         }
+     else   map.set(arr[i], i);
+      }
+
+      return [-1, -1];
+ }
+
+console.log(TwoSum(arr, target));
+
+
+let arr1 = [1,2,2,1];
+let arr2 = [2,2];
+ 
+ function Intersaction(arrOne: any, arrTwo: any) {
+   let map = new Map();
+    const result: number[] = [];
+   
+   for( let nums of arrOne) {
+    map.set(nums, true);
+   }
+
+   for(const nums of arrTwo) {
+      if(map.has(nums)) {
+         result.push(nums);
+         map.delete(nums);
+      }
+
+   }
+   return result;
+ }
+
+
+ console.log(Intersaction(arr1, arr2));
+ console.log(Intersaction([4, 9, 5], [9, 4, 9, 8, 4]));
+ console.log(Intersaction([1, 2, 3], [4, 5, 6]));
+
+    let k = 2
+   
+
+   function subArray(arr: any, k: any) {
+      let map = new Map();
+      map.set(0,1);
+      let sum = 0;
+      let count = 0
+     for(let nums of arr) {
+      sum += nums;
+       const previous = map.get(sum - k);
+      if(previous) {
+          count += previous;
+      }
+      map.set(sum, (map.get(sum) ?? 0) + 1);
+      console.log(map);
+     }
+     return count;
+     
+   }
+
+console.log(subArray([1,1,1], 2));
+
+
+console.log(subArray([10,12,1,1,2,3,7,5], 12));
