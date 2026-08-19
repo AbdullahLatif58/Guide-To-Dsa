@@ -6,3 +6,19 @@
 
 // It decides when asynchronous callbacks are allowed to run.
 
+
+
+//              JavaScript Runtime
+
+//         ┌──────────────────┐
+//         │    Call Stack    │
+//         └────────┬─────────┘
+//                  ↑
+//                  │
+//             Event Loop
+//                  │
+//        ┌─────────┴─────────┐
+//        │                   │
+//  Microtask Queue       Task Queue
+//        │                   │
+//  Promise callbacks     timers/I/O etc.
