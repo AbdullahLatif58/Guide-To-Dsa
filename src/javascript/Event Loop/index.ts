@@ -22,3 +22,14 @@
 //  Microtask Queue       Task Queue
 //        │                   │
 //  Promise callbacks     timers/I/O etc.
+
+
+
+
+// Synchronous code
+//        ↓
+// Microtask Queue
+// (Promise.then, queueMicrotask)
+//        ↓
+// Task/Macrotask Queue
+// (setTimeout, setInterval, etc.)
